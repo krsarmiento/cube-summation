@@ -5,9 +5,7 @@
 {% block content_header '' %}
 
 {% block content %}
-    <form action="" method="post" {{ form_enctype(form) }}>
-        {{ form_widget(form) }}
-
-        <input type="submit" value="Siguiente" />
-    </form>
+    {% for i in range(1, times) %}
+        {{i}}....
+    {% endfor %}
 {% endblock %}
