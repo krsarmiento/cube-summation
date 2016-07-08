@@ -5,9 +5,46 @@
 {% block content_header '' %}
 
 {% block content %}
+    <h2>Cube Summation</h2>
+    <hr/>
     <form action="" method="post" {{ form_enctype(form) }}>
+
+        <div>
+            {{ form_label(form.dimension) }}
+            {{ form_errors(form.dimension) }}
+            <br/>
+            {{ form_widget(form.dimension) }}
+        </div>
+
+        <div>
+            {{ form_label(form.lines) }}
+            {{ form_errors(form.lines) }}
+            <br/>
+            {{ form_widget(form.lines) }}
+        </div>
+
+        <div>
+            {{ form_label(form.queries) }}
+            {{ form_errors(form.queries) }}
+            <br/>
+            {{ form_widget(form.queries, { 'attr': {'cols': '30', 'rows': '10'} }) }}
+        </div>
+
         {{ form_widget(form) }}
 
-        <input type="submit" value="Siguiente" />
+        <input type="submit" value="Evaluar" />
     </form>
+
+    <hr/>
+
+    <div>
+        {% if result %}
+            <h2>Result</h2>
+            <br/>
+        {% endif %}
+        {% for value in result %}
+            {{value}}<br/>
+        {% endfor %}
+    </div>
+
 {% endblock %}
