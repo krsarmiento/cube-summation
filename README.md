@@ -45,8 +45,9 @@ UPDATE 2 2 2 1
 QUERY 1 1 1 1 1 1
 QUERY 1 1 1 2 2 2
 QUERY 2 2 2 2 2 2
-Sample Output
 
+
+Sample Output
 4
 4
 27
